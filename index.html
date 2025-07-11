@@ -5,18 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sushil Kumar | Home</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-
   <style>
     :root {
-      --primary: #e67e22; /* Orange accent */
+      --primary: #e67e22;
       --primary-hover: #d35400;
       --primary-focus: rgba(230, 126, 34, 0.125);
     }
     body {
-      background: #fcf3cf; /* Soft yellow background */
+      background: #fcf3cf;
+      color: #333; /* darker text for better contrast */
     }
     nav {
       background-color: #fef5e7;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    nav ul {
+      flex-wrap: wrap;
+      gap: 0.5em;
+      font-size: 0.95em; /* slightly smaller font */
     }
     nav a {
       color: var(--primary);
@@ -46,9 +53,18 @@
       height: 180px;
       object-fit: cover;
     }
-    .bio {
-      flex: 1;
-      min-width: 250px;
+    @media (max-width: 600px) {
+      figure img {
+        width: 120px;
+        height: 120px;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul li {
+        margin-bottom: 0.3em;
+      }
     }
   </style>
 </head>
