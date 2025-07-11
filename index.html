@@ -54,9 +54,17 @@
         background: #fef5e7;
         border-radius: 4px;
       }
-      nav .menu.show {
-        display: flex;
-      }
+      nav .menu a[role="button"] {
+  background-color: var(--primary);
+  color: #fff; /* Always white text */
+  padding: 0.4em 0.8em;
+  border-radius: 4px;
+}
+nav .menu a[role="button"]:hover {
+  background-color: var(--primary-hover);
+  color: #fff;
+}
+
       nav .hamburger {
         display: block;
       }
@@ -101,7 +109,7 @@
     </div>
     <div class="menu">
       <a href="index.html">Home</a>
-      <a href="academic.html">Academic Details</a>
+      <a href="academics.html">Academic Details</a>
       <a href="research.html">Research</a>
       <a href="experience.html">Experience</a>
       <a href="contact.html" role="button">Contact</a>
