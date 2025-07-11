@@ -44,6 +44,17 @@
       cursor: pointer;
       user-select: none;
     }
+    /* Button styling applies everywhere */
+    nav .menu a[role="button"] {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 0.4em 0.8em;
+      border-radius: 4px;
+    }
+    nav .menu a[role="button"]:hover {
+      background-color: var(--primary-hover);
+      color: #fff;
+    }
     /* Mobile styles */
     @media (max-width: 600px) {
       nav .menu {
@@ -54,17 +65,9 @@
         background: #fef5e7;
         border-radius: 4px;
       }
-      nav .menu a[role="button"] {
-  background-color: var(--primary);
-  color: #fff; /* Always white text */
-  padding: 0.4em 0.8em;
-  border-radius: 4px;
-}
-nav .menu a[role="button"]:hover {
-  background-color: var(--primary-hover);
-  color: #fff;
-}
-
+      nav .menu.show {
+        display: flex;
+      }
       nav .hamburger {
         display: block;
       }
