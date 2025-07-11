@@ -25,33 +25,40 @@
     }
     nav .brand {
       font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav .menu {
+      display: flex;
+      gap: 1em;
     }
     nav .menu a {
       color: var(--primary);
       text-decoration: none;
-      margin-left: 1em;
     }
     nav .menu a:hover {
       color: var(--primary-hover);
     }
-    /* Hide mobile menu on desktop */
-    nav .mobile-menu {
+    nav .hamburger {
       display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      user-select: none;
     }
-    /* Show dropdown on small screens */
+    /* Mobile styles */
     @media (max-width: 600px) {
-      nav .desktop-menu {
+      nav .menu {
         display: none;
-      }
-      nav .mobile-menu {
-        display: block;
+        flex-direction: column;
         width: 100%;
         margin-top: 0.5em;
+        background: #fef5e7;
+        border-radius: 4px;
       }
-      nav .mobile-menu select {
-        width: 100%;
-        padding: 0.5em;
-        font-size: 1em;
+      nav .menu.show {
+        display: flex;
+      }
+      nav .hamburger {
+        display: block;
       }
     }
     h2, h3 {
@@ -89,22 +96,15 @@
     <div class="brand">
       Sushil Kumar
     </div>
-    <div class="menu desktop-menu">
+    <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('show')">
+      ☰
+    </div>
+    <div class="menu">
       <a href="index.html">Home</a>
       <a href="academic.html">Academic Details</a>
       <a href="research.html">Research</a>
       <a href="experience.html">Experience</a>
       <a href="contact.html" role="button">Contact</a>
-    </div>
-    <div class="mobile-menu">
-      <select onchange="if (this.value) window.location.href=this.value">
-        <option value="">Menu</option>
-        <option value="index.html">Home</option>
-        <option value="academics.html">Academic Details</option>
-        <option value="research.html">Research</option>
-        <option value="experience.html">Experience</option>
-        <option value="contact.html">Contact</option>
-      </select>
     </div>
   </nav>
 
