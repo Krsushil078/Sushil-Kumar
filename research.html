@@ -1,58 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Research | Sushil Kumar</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-  </head>
-  <body>
-    <nav class="container-fluid">
-      <ul>
-        <li><strong>Sushil Kumar</strong></li>
-      </ul>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="contact.html" role="button">Contact</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research | Sushil Kumar</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
 
-    <main class="container">
-  <section>
-    <hgroup>
-      <h2>Research</h2>
-      <h3>Publications & Current Work</h3>
-    </hgroup>
-    <p>
-      My research focuses on the valuation of ecosystem services, pollution impacts, and household behavior in environmental decision-making.
-      I explore topics such as:
-    </p>
-    <ul>
-      <li>Valuation of ecosystem services using choice experiments</li>
-      <li>Health costs of arsenic contamination in groundwater</li>
-      <li>Behavioral economics related to water safety practices in rural India</li>
-    </ul>
-    <p>
-      Publications include peer-reviewed work in <i>Groundwater for Sustainable Development</i> and presentations at AERE, INSEE, and As2024 conferences.
-    </p>
+  <style>
+    /* Color palette */
+    :root {
+      --primary: #e67e22; /* Orange accent */
+      --primary-hover: #d35400;
+      --primary-focus: rgba(230, 126, 34, 0.125);
+    }
+    body {
+      background: #fcf3cf; /* Soft yellow background */
+    }
+    nav {
+      background-color: #fef5e7;
+    }
+    nav a {
+      color: var(--primary);
+    }
+    nav a:hover {
+      color: var(--primary-hover);
+    }
+    h2, h3 {
+      color: var(--primary);
+    }
+    ul li.publication {
+      margin-bottom: 1em;
+      border: 1px solid #e67e22;
+      padding: 1em;
+      border-radius: 6px;
+      background: #fff9ec;
+    }
+  </style>
+</head>
 
-    <h3>Publications</h3>
+<body>
+  <nav class="container-fluid">
     <ul>
-      <li>
-        Kumar, S. & Nayak, D. (2025). Assessing the Health Costs of Arsenic-Contaminated Drinking Water in Bihar, India: A Bivariate Probit Analysis. <i>Groundwater for Sustainable Development</i>, 29, 101429. <a href="https://doi.org/10.1016/j.gsd.2025.101429" target="_blank">https://doi.org/10.1016/j.gsd.2025.101429</a>
-      </li>
-      <li>
-        Kumar, S. & Nayak, D. (2024). How do households living in arsenic-contaminated regions value safe drinking water in Western Bihar, India? <i>Groundwater for Sustainable Development</i>, 26, 101189. <a href="https://doi.org/10.1016/j.gsd.2024.101189" target="_blank">https://doi.org/10.1016/j.gsd.2024.101189</a>
-      </li>
-      <li>
-        Kaur, J. & Kumar, S. (2017). Challenges and Opportunities in Micro, Small and Medium Enterprises in India. <i>Journal of Economics Patna University</i>, 2(1), 63–72.
-      </li>
-      <li>
-        Kumar, S. & Sinha, K. (2017). Demonetization: A Step Towards Digitalization. <i>Journal of Economics Patna University</i>, 2(2), 62–73.
-      </li>
+      <li><strong>Sushil Kumar</strong></li>
     </ul>
-  </section>
-</main>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html" role="button">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container" style="background: #fff9ec; padding: 2em; border-radius: 8px;">
+    <section>
+      <hgroup>
+        <h2>Research</h2>
+        <h3>Publications & Current Work</h3>
+      </hgroup>
+      <p>
+        My research focuses on the valuation of ecosystem services, pollution impacts, and household behavior in environmental decision-making.
+        I explore topics such as:
+      </p>
+      <ul>
+        <li>Valuation of ecosystem services using choice experiments</li>
+        <li>Health costs of arsenic contamination in groundwater</li>
+        <li>Behavioral economics related to water safety practices in rural India</li>
+      </ul>
+      <p>
+        Publications include peer-reviewed work in <i>Groundwater for Sustainable Development</i> and presentations at AERE, INSEE, and As2024 conferences.
+      </p>
+
+      <h3>Publications</h3>
+      <ul>
+        <li class="publication">
+          Kumar, S. & Nayak, D. (2025). Assessing the Health Costs of Arsenic-Contaminated Drinking Water in Bihar, India: A Bivariate Probit Analysis.
+          <i>Groundwater for Sustainable Development</i>, 29, 101429.
+          <br>
+          <a href="https://doi.org/10.1016/j.gsd.2025.101429" target="_blank">https://doi.org/10.1016/j.gsd.2025.101429</a>
+        </li>
+        <li class="publication">
+          Kumar, S. & Nayak, D. (2024). How do households living in arsenic-contaminated regions value safe drinking water in Western Bihar, India?
+          <i>Groundwater for Sustainable Development</i>, 26, 101189.
+          <br>
+          <a href="https://doi.org/10.1016/j.gsd.2024.101189" target="_blank">https://doi.org/10.1016/j.gsd.2024.101189</a>
+        </li>
+        <li class="publication">
+          Kaur, J. & Kumar, S. (2017). Challenges and Opportunities in Micro, Small and Medium Enterprises in India.
+          <i>Journal of Economics Patna University</i>, 2(1), 63–72.
+        </li>
+        <li class="publication">
+          Kumar, S. & Sinha, K. (2017). Demonetization: A Step Towards Digitalization.
+          <i>Journal of Economics Patna University</i>, 2(2), 62–73.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container">
+    <small><a href="index.html">Back to Home</a></small>
+  </footer>
+</body>
+</html>
