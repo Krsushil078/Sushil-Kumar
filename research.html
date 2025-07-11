@@ -1,163 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Research | Sushil Kumar</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-  <style>
-    :root {
-      --primary: #e67e22;
-      --primary-hover: #d35400;
-      --primary-focus: rgba(230, 126, 34, 0.125);
-    }
-    body {
-      background: #fcf3cf;
-      color: #333;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      background-color: #fef5e7;
-      padding: 1em;
-    }
-    nav .brand {
-      font-weight: bold;
-    }
-    nav .menu {
-      display: flex;
-      gap: 1em;
-    }
-    nav .menu a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-    nav .menu a:hover {
-      color: var(--primary-hover);
-    }
-    nav .hamburger {
-      display: none;
-      font-size: 1.5em;
-      cursor: pointer;
-      user-select: none;
-    }
-    nav .menu a[role="button"] {
-      background-color: var(--primary);
-      color: #fff;
-      padding: 0.4em 0.8em;
-      border-radius: 4px;
-    }
-    nav .menu a[role="button"]:hover {
-      background-color: var(--primary-hover);
-      color: #fff;
-    }
-    @media (max-width: 600px) {
-      nav .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 0.5em;
-        background: #fef5e7;
-        border-radius: 4px;
-      }
-      nav .menu.show {
-        display: flex;
-      }
-      nav .hamburger {
-        display: block;
-      }
-    }
-    h2, h3 {
-      color: var(--primary);
-      font-weight: bold;
-    }
-    main.container {
-      background: #fff9ec;
-      padding: 2em;
-      border-radius: 8px;
-      margin-top: 1em;
-    }
-  </style>
-</head>
-<body>
-  <nav class="container-fluid">
-    <div class="brand">
-      Sushil Kumar
-    </div>
-    <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('show')">
-      ☰
-    </div>
-    <div class="menu">
-      <a href="index.html">Home</a>
-      <a href="academic.html">Academic Details</a>
-      <a href="research.html">Research</a>
-      <a href="experience.html">Experience</a>
-      <a href="contact.html" role="button">Contact</a>
-    </div>
-  </nav>
-
-  <main class="container">
-    <section>
-      <hgroup>
-        <h2>Research</h2>
-      </hgroup>
-      <p>
-        My research focuses on environmental and development economics, particularly the economic impacts of groundwater contamination and household decision-making related to health and resource use. I employ applied econometric methods and field-based data collection to inform evidence-based policy solutions.
-      </p>
-    </section>
-
-    <section>
-      <h3>Publications</h3>
-      <ul>
-        <li>
-          Kumar, S. & Nayak, D. (2025). Assessing the Health Costs of Arsenic-Contaminated Drinking Water in Bihar, India: A Bivariate Probit Analysis. <i>Groundwater for Sustainable Development</i>, 29, 101429. 
-          <br><a href="https://doi.org/10.1016/j.gsd.2025.101429" target="_blank">https://doi.org/10.1016/j.gsd.2025.101429</a>
-        </li>
-        <li>
-          Kumar, S. & Nayak, D. (2024). How do households living in arsenic-contaminated regions value safe drinking water in Western Bihar, India? <i>Groundwater for Sustainable Development</i>, 26, 101189. 
-          <br><a href="https://doi.org/10.1016/j.gsd.2024.101189" target="_blank">https://doi.org/10.1016/j.gsd.2024.101189</a>
-        </li>
-        <li>
-          Kaur, J. & Kumar, S. (2017). Challenges and Opportunities in Micro, Small and Medium Enterprises in India. <i>Journal of Economics Patna University</i>, 2(1), 63–72.
-        </li>
-        <li>
-          Kumar, S. & Sinha, K. (2017). Demonetization: A step towards Digitalization. <i>Journal of Economics Patna University</i>, 2(2), 62–73.
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Seminars & Conferences</h3>
-      <ul>
-        <li>Poster presentation: “Factors impacting the households’ decisions for arsenic-safe drinking water in Buxar District, Bihar,” 9th International Congress & Exhibition on Arsenic in the Environment, KIIT University, October 20–24, 2024.</li>
-        <li>Poster presentation: “Assessing the Health Costs of Drinking Arsenic-Contaminated Water in Buxar District, Bihar: A Bivariate Probit Analysis,” 12th INSEE Biennial Conference, BML Munjal University, January 31–February 2, 2024.</li>
-        <li>Paper: “How do arsenic-concentrated households perceive safe drinking water? A case study of Western Bihar, India,” 12th Congress of Asian Association of Environmental and Resource Economics 2023, Waseda University, Japan.</li>
-        <li>Paper: “Impacts of Fluoride and Arsenic Contaminated Groundwater on Human Health: A Systematic Review and Evidence from India,” National Seminar on Environmental Issues and Present Society, MPISSR, December 21–22, 2021.</li>
-        <li>National Seminar on Financial Inclusion and Women Empowerment in India, Patna University, September 24–25, 2016.</li>
-        <li>Paper: “A Study of the Trend of Public Expenditure on Education in India,” National Seminar “Twenty-Five Years of Economic Reforms in India: The Path Ahead,” University of Allahabad, March 25–26, 2017.</li>
-      </ul>
-    </section>
-
-    <section>
       <h3>Workshops & Short Courses</h3>
       <ul>
-        <li>Short course on “Arsenic and Potentially Toxic Metals in Food and Agroecosystems,” 9th International Congress on Arsenic in the Environment, KIIT University, October 20–24, 2024.</li>
-        <li>One-week summer school on “Applied Econometrics,” Department of Economics & Politics, Visva-Bharati, June 24–30, 2024.</li>
-        <li>Online workshop on “Data Analytics Using R,” IIHMR University, June 19–23, 2020.</li>
-        <li>GIM Virtual Workshop on “Time Series and Panel Data Modelling Using E-Views and STATA,” June 12–14, 2020.</li>
-        <li>Workshop “Improving Awareness about Plagiarism,” Mahatma Gandhi Central Library, IIT Roorkee, October 31, 2018.</li>
-        <li>Workshop “Reference Management using Mendeley,” Mahatma Gandhi Central Library, IIT Roorkee, November 22, 2018.</li>
-        <li>National Workshop on Research Methodology, BBAU Lucknow, January 11–25, 2017.</li>
-        <li>Workshop “Publishing in Academic Journals: An Author’s Workshop,” IIT Roorkee and Taylor & Francis, May 4, 2019.</li>
-        <li>Workshop on “Elder Abuse and Crime Against the Elderly,” IIT Roorkee and NISD, February 21–22, 2019.</li>
+        <li class="seminar">
+          Completed a short course on “Arsenic and Potentially Toxic Metals in Food and Agroecosystems,” as part of the 9th International Congress & Exhibition on Arsenic in the Environment, organized by Kalinga Institute of Industrial Technology (Deemed to be University), Bhubaneswar, India, October 20–24, 2024.
+        </li>
+        <li class="seminar">
+          Participated in a one-week summer school on “Applied Econometrics,” organized by the Department of Economics & Politics, Visva-Bharati, Santiniketan, June 24–30, 2024.
+        </li>
+        <li class="seminar">
+          Attended a one-week online workshop on “Data Analytics Using R for Master’s and Doctoral Students,” organized by IIHMR University, June 19–23, 2020.
+        </li>
+        <li class="seminar">
+          Participated in the GIM Virtual Workshop on “Time Series and Panel Data Modelling Using E-Views and STATA,” June 12–14, 2020.
+        </li>
+        <li class="seminar">
+          Participated in a one-day workshop titled “Improving Awareness about Plagiarism,” organized by the Mahatma Gandhi Central Library, IIT Roorkee, on October 31, 2018.
+        </li>
+        <li class="seminar">
+          Participated in a one-day workshop titled “Workshop on Reference Management using Mendeley,” organised by the Mahatma Gandhi Central Library, IIT Roorkee, on November 22, 2018.
+        </li>
+        <li class="seminar">
+          Participated in the “National Workshop on Research Methodology,” organized by Babasaheb Bhimrao Ambedkar University, Lucknow (A Central University), from January 11–25, 2017.
+        </li>
+        <li class="seminar">
+          Participated in the workshop “Publishing in Academic Journals: An Author’s Workshop,” jointly organized by the Mahatma Gandhi Central Library, IIT Roorkee, and Taylor & Francis Group on May 4, 2019.
+        </li>
+        <li class="seminar">
+          Participated in a two-day workshop on “Elder Abuse and Crime Against the Elderly: Challenges and Preventive Measures,” organized by the Department of Humanities and Social Sciences, IIT Roorkee, in association with the National Institute of Social Defence, Ministry of Social Justice and Empowerment, February 21–22, 2019.
+        </li>
       </ul>
-    </section>
-  </main>
-
-  <footer class="container">
-    <small><a href="index.html">Back to Home</a></small>
-  </footer>
-</body>
-</html>
