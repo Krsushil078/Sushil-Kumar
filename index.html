@@ -13,23 +13,46 @@
     }
     body {
       background: #fcf3cf;
-      color: #333; /* darker text for better contrast */
+      color: #333;
     }
     nav {
-      background-color: #fef5e7;
-      flex-wrap: wrap;
+      display: flex;
       justify-content: space-between;
-    }
-    nav ul {
+      align-items: center;
       flex-wrap: wrap;
-      gap: 0.5em;
-      font-size: 0.95em; /* slightly smaller font */
+      background-color: #fef5e7;
+      padding: 1em;
     }
-    nav a {
+    nav .brand {
+      font-weight: bold;
+    }
+    nav .menu a {
       color: var(--primary);
+      text-decoration: none;
+      margin-left: 1em;
     }
-    nav a:hover {
+    nav .menu a:hover {
       color: var(--primary-hover);
+    }
+    /* Hide mobile menu on desktop */
+    nav .mobile-menu {
+      display: none;
+    }
+    /* Show dropdown on small screens */
+    @media (max-width: 600px) {
+      nav .desktop-menu {
+        display: none;
+      }
+      nav .mobile-menu {
+        display: block;
+        width: 100%;
+        margin-top: 0.5em;
+      }
+      nav .mobile-menu select {
+        width: 100%;
+        padding: 0.5em;
+        font-size: 1em;
+      }
     }
     h2, h3 {
       color: var(--primary);
@@ -58,28 +81,31 @@
         width: 120px;
         height: 120px;
       }
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav ul li {
-        margin-bottom: 0.3em;
-      }
     }
   </style>
 </head>
 <body>
   <nav class="container-fluid">
-    <ul>
-      <li><strong>Sushil Kumar</strong></li>
-    </ul>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="academics.html">Academic Details</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="contact.html" role="button">Contact</a></li>
-    </ul>
+    <div class="brand">
+      Sushil Kumar
+    </div>
+    <div class="menu desktop-menu">
+      <a href="index.html">Home</a>
+      <a href="academic.html">Academic Details</a>
+      <a href="research.html">Research</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html" role="button">Contact</a>
+    </div>
+    <div class="mobile-menu">
+      <select onchange="if (this.value) window.location.href=this.value">
+        <option value="">Menu</option>
+        <option value="index.html">Home</option>
+        <option value="academic.html">Academic Details</option>
+        <option value="research.html">Research</option>
+        <option value="experience.html">Experience</option>
+        <option value="contact.html">Contact</option>
+      </select>
+    </div>
   </nav>
 
   <main class="container">
