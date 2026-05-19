@@ -2,226 +2,456 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sushil Kumar | Home</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Dr. Sushil Kumar | Environmental Economist</title>
+
+  <meta name="description" content="Official academic website of Dr. Sushil Kumar, Environmental Economist and Researcher specializing in groundwater contamination, public health, development economics, and applied econometrics." />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"/>
+
   <style>
-    :root {
-      --primary: #e67e22;
-      --primary-hover: #d35400;
-      --primary-focus: rgba(230, 126, 34, 0.125);
+
+    :root{
+      --primary:#1e3a5f;
+      --secondary:#2563eb;
+      --light:#f8fafc;
+      --dark:#1f2937;
+      --accent:#0f766e;
     }
-    body {
-      background: #fcf3cf;
-      color: #333;
+
+    body{
+      background: var(--light);
+      color: var(--dark);
+      font-family: "Segoe UI", sans-serif;
     }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      background-color: #fef5e7;
-      padding: 1em;
+
+    nav{
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      padding:1rem 2rem;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
-    nav .brand {
-      font-weight: bold;
-      font-size: 1.1em;
+
+    nav .brand{
+      font-size:1.4rem;
+      font-weight:700;
+      color:var(--primary);
     }
-    nav .menu {
-      display: flex;
-      gap: 1em;
+
+    nav .menu{
+      display:flex;
+      gap:1rem;
+      align-items:center;
     }
-    nav .menu a {
-      color: var(--primary);
-      text-decoration: none;
+
+    nav .menu a{
+      text-decoration:none;
+      color:var(--primary);
+      font-weight:500;
     }
-    nav .menu a:hover {
-      color: var(--primary-hover);
+
+    nav .menu a:hover{
+      color:var(--secondary);
     }
-    nav .hamburger {
-      display: none;
-      font-size: 1.5em;
-      cursor: pointer;
-      user-select: none;
+
+    nav .hamburger{
+      display:none;
+      font-size:1.5rem;
+      cursor:pointer;
     }
-    nav .menu a[role="button"] {
-      background-color: var(--primary);
-      color: #fff;
-      padding: 0.4em 0.8em;
-      border-radius: 4px;
-    }
-    nav .menu a[role="button"]:hover {
-      background-color: var(--primary-hover);
-      color: #fff;
-    }
-    @media (max-width: 600px) {
-      nav .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 0.5em;
-        background: #fef5e7;
-        border-radius: 4px;
+
+    @media(max-width:768px){
+
+      nav{
+        padding:1rem;
       }
-      nav .menu.show {
-        display: flex;
+
+      nav .menu{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        margin-top:1rem;
       }
-      nav .hamburger {
-        display: block;
+
+      nav .menu.show{
+        display:flex;
+      }
+
+      nav .hamburger{
+        display:block;
       }
     }
-    h2, h3 {
-      color: var(--primary);
-    }
-    main.container {
-      background: #fff9ec;
-      padding: 2em;
-      border-radius: 8px;
-      margin-top: 1em;
-    }
-    .profile-container {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 1em;
-      align-items: center;
-    }
-    .profile-container figure {
-      flex: 0 0 auto;
-      margin: 0;
-    }
-    .profile-container figure img {
-      border-radius: 50%;
-      border: 3px solid #e67e22;
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-    }
-    .bio {
-      flex: 1 1 auto;
-      text-align: left;
+
+    /* HERO SECTION */
+
+    .hero{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:3rem;
+      padding:4rem 0;
+      flex-wrap:wrap;
     }
 
-    /* --- Photo Gallery Section --- */
-    #photo-gallery {
-      padding: 3em 1em;
-      background-color: #fff;
-      border-radius: 8px;
-      margin-top: 2em;
-      text-align: center;
+    .hero-text{
+      flex:1;
+      min-width:300px;
     }
 
-    .gallery-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2em;
-      margin-top: 2em;
+    .hero-text h1{
+      font-size:3rem;
+      margin-bottom:0.5rem;
+      color:var(--primary);
     }
 
-    .gallery-item {
-      width: 280px;
-      background: #fff9ec;
-      border: 1px solid #f5cba7;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s;
+    .hero-text h2{
+      font-size:1.4rem;
+      color:#4b5563;
+      margin-bottom:1rem;
     }
 
-    .gallery-item:hover {
-      transform: translateY(-8px);
+    .hero-text p{
+      font-size:1.1rem;
+      line-height:1.9;
     }
 
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .hero-buttons{
+      margin-top:2rem;
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
     }
 
-    .gallery-item h3 {
-      margin: 0.8em 0 0.2em;
-      color: var(--primary);
+    .hero-buttons a{
+      padding:0.8rem 1.2rem;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:600;
     }
 
-    .gallery-item p {
-      padding: 0 1em 1em;
-      color: #333;
-      font-size: 0.95em;
+    .primary-btn{
+      background:var(--primary);
+      color:white;
     }
+
+    .primary-btn:hover{
+      background:var(--secondary);
+      color:white;
+    }
+
+    .secondary-btn{
+      border:2px solid var(--primary);
+      color:var(--primary);
+    }
+
+    .secondary-btn:hover{
+      background:var(--primary);
+      color:white;
+    }
+
+    .hero-image img{
+      width:260px;
+      height:260px;
+      object-fit:cover;
+      border-radius:50%;
+      border:6px solid var(--primary);
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    /* SECTION */
+
+    section{
+      margin-top:4rem;
+    }
+
+    section h2{
+      text-align:center;
+      margin-bottom:2rem;
+      color:var(--primary);
+    }
+
+    /* RESEARCH CARDS */
+
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:1.5rem;
+    }
+
+    .card{
+      background:white;
+      padding:1.5rem;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h3{
+      color:var(--accent);
+      margin-bottom:0.8rem;
+    }
+
+    /* GALLERY */
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:1.5rem;
+    }
+
+    .gallery-item{
+      background:white;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.06);
+    }
+
+    .gallery-item img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .gallery-item h3{
+      padding:1rem;
+      margin:0;
+      color:var(--primary);
+    }
+
+    /* FOOTER */
+
+    footer{
+      margin-top:5rem;
+      padding:2rem 0;
+      text-align:center;
+      border-top:1px solid #ddd;
+    }
+
+    footer a{
+      text-decoration:none;
+      margin:0 0.5rem;
+      color:var(--primary);
+    }
+
   </style>
 </head>
+
 <body>
+
+  <!-- NAVBAR -->
+
   <nav class="container-fluid">
+
     <div class="brand">
-     Dr. Sushil Kumar
+      Dr. Sushil Kumar
     </div>
-    <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('show')">
+
+    <div class="hamburger"
+      onclick="document.querySelector('.menu').classList.toggle('show')">
       ☰
     </div>
+
     <div class="menu">
       <a href="index.html">Home</a>
       <a href="academics.html">Academic Details</a>
       <a href="research.html">Research</a>
       <a href="experience.html">Experience</a>
-      <a href="contact.html" role="button">Contact</a>
+      <a href="contact.html">Contact</a>
     </div>
+
   </nav>
 
   <main class="container">
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+      <div class="hero-text">
+
+        <h1>Dr. Sushil Kumar</h1>
+
+        <h2>
+          Environmental Economist | Researcher | Educator
+        </h2>
+
+        <p>
+          Research-driven scholar specializing in environmental economics,
+          groundwater contamination, public health, sustainability,
+          and development policy using applied econometrics and
+          interdisciplinary research methods.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="cv.pdf" class="primary-btn">
+            Download CV
+          </a>
+
+          <a href="research.html" class="secondary-btn">
+            Research Projects
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+        <img src="images/profile.PNG"
+          alt="Dr. Sushil Kumar">
+      </div>
+
+    </section>
+
+    <!-- RESEARCH INTERESTS -->
+
     <section>
-      <hgroup>
-        <h2>Welcome</h2>
-        <h3>Environmental Economist | Researcher | Educator</h3>
-      </hgroup>
 
-      <div class="profile-container">
-        <figure>
-          <img src="images/profile.PNG" alt="Sushil Kumar's Photo" />
-          <figcaption>Sushil Kumar</figcaption>
-        </figure>
+      <h2>Research Interests</h2>
 
-        <div class="bio">
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Environmental Economics</h3>
           <p>
-            Hello! I'm Sushil Kumar, a PhD scholar in Environmental Economics at IIT Roorkee.
-            Motivated and research-driven scholar with a strong academic background in Environmental Economics,
-            data analysis, and applied econometrics. Experienced in working with large-scale datasets and conducting
-            interdisciplinary research at the intersection of sustainability, environmental policy, public health,
-            and development economics. This website highlights my academic contributions, research publications,
-            and collaborative projects.
+            Research on environmental degradation,
+            groundwater contamination, and sustainability.
           </p>
         </div>
+
+        <div class="card">
+          <h3>Health Economics</h3>
+          <p>
+            Examining health costs, disease burden,
+            and socioeconomic impacts of pollution exposure.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Applied Econometrics</h3>
+          <p>
+            Bayesian analysis, SEM, SUBP models,
+            PCA, and advanced quantitative methods.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Development Studies</h3>
+          <p>
+            Research on poverty, education,
+            livelihood, and rural transformation.
+          </p>
+        </div>
+
       </div>
+
     </section>
 
-    <!-- ✅ New Photo Gallery Section Starts Here -->
-    <section id="photo-gallery">
-      <h2>Photo Gallery</h2>
-      <p>A glimpse of research, fieldwork, and academic moments</p>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="images/photo1.jpg" alt="As2024 Conference at KIIT">
-          <h3>Poster Presentation at As2024</h3>
+    <!-- CURRENT PROJECTS -->
+
+    <section>
+
+      <h2>Current Research Projects</h2>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Arsenic Contamination in Bihar</h3>
+          <p>
+            Assessing health and economic burden
+            associated with arsenic exposure.
+          </p>
         </div>
-        <div class="gallery-item">
-          <img src="images/defense.jpg" alt="Fieldwork Snapshot">
-          <h3>Ph.D Final Viva-voce</h3>
-         
+
+        <div class="card">
+          <h3>NFHS & NSS Data Analysis</h3>
+          <p>
+            Large-scale data analysis involving
+            health, education, and socio-economic indicators.
+          </p>
         </div>
-        <div class="gallery-item">
-          <img src="images/photo3.jpg" alt="Collaborative Workshop">
-          <h3>Collaborative Workshop</h3>
-          
+
+        <div class="card">
+          <h3>Education Infrastructure</h3>
+          <p>
+            Comparative study of government
+            and private schools in Bihar.
+          </p>
         </div>
+
+        <div class="card">
+          <h3>Tribal Development & Fintech</h3>
+          <p>
+            Indigenous knowledge systems and fintech
+            solutions for tribal livelihoods.
+          </p>
+        </div>
+
       </div>
+
     </section>
-    <!-- ✅ End Gallery Section -->
+
+    <!-- PHOTO GALLERY -->
+
+    <section>
+
+      <h2>Academic & Research Gallery</h2>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <img src="images/photo1.jpg"
+            alt="Poster Presentation">
+          <h3>Poster Presentation at AS2024</h3>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/defense.jpg"
+            alt="PhD Viva">
+          <h3>Ph.D Final Viva-Voce</h3>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/photo3.jpg"
+            alt="Workshop">
+          <h3>Collaborative Workshop</h3>
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <footer class="container">
-    <small>
-      <a href="https://orcid.org/0000-0001-5876-4300" target="_blank">ORCID</a> •
-      <a href="mailto:skumar3@hs.iitr.ac.in">Email</a>
-    </small>
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Dr. Sushil Kumar
+    </p>
+
+    <p>
+
+      <a href="https://orcid.org/0000-0001-5876-4300"
+        target="_blank">
+        ORCID
+      </a>
+
+      |
+
+      <a href="mailto:skumar3@hs.iitr.ac.in">
+        Email
+      </a>
+
+    </p>
+
   </footer>
+
 </body>
 </html>
