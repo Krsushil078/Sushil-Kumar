@@ -1,136 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Experience & Education | Sushil Kumar</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-  <style>
-    :root {
-      --primary: #e67e22;
-      --primary-hover: #d35400;
-      --primary-focus: rgba(230, 126, 34, 0.125);
-    }
-    body {
-      background: #fcf3cf;
-    }
-    nav {
-      background-color: #fef5e7;
-    }
-    nav a {
-      color: var(--primary);
-    }
-    nav a:hover {
-      color: var(--primary-hover);
-    }
-    h2, h3 {
-      color: var(--primary);
-    }
-    main.container {
-      background: #fff9ec;
-      padding: 2em;
-      border-radius: 8px;
-      margin-top: 1em;
-    }
-    .experience-entry {
-      margin-bottom: 1.5em;
-      padding: 1em;
-      border: 1px solid #e67e22;
-      border-radius: 6px;
-      background: #fef5e7;
-    }
-    .experience-entry h4 {
-      margin: 0 0 0.3em 0;
-    }
-    .experience-entry p {
-      margin: 0.2em 0;
-    }
-  </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Professional Experience | Dr. Sushil Kumar</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+<style>
+
+:root{
+  --primary:#1e3a5f;
+  --secondary:#2563eb;
+  --light:#f8fafc;
+  --dark:#1f2937;
+  --accent:#0f766e;
+}
+
+body{
+  background:var(--light);
+  font-family:"Segoe UI",sans-serif;
+  color:var(--dark);
+}
+
+nav{
+  background:white;
+  padding:1rem 2rem;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav ul{
+  align-items:center;
+}
+
+nav strong{
+  color:var(--primary);
+  font-size:1.2rem;
+}
+
+nav a{
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:var(--secondary);
+}
+
+main.container{
+  padding:3rem 1rem;
+}
+
+.page-title{
+  text-align:center;
+  margin-bottom:3rem;
+}
+
+.page-title h1{
+  color:var(--primary);
+  margin-bottom:0.5rem;
+}
+
+.page-title p{
+  font-size:1.1rem;
+  color:#555;
+}
+
+.timeline{
+  position:relative;
+  margin-top:2rem;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:20px;
+  top:0;
+  width:4px;
+  height:100%;
+  background:var(--primary);
+}
+
+.experience-card{
+  position:relative;
+  background:white;
+  margin-left:60px;
+  margin-bottom:2rem;
+  padding:1.5rem;
+  border-radius:12px;
+  box-shadow:0 5px 18px rgba(0,0,0,0.06);
+}
+
+.experience-card::before{
+  content:"";
+  position:absolute;
+  left:-50px;
+  top:24px;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:var(--accent);
+  border:4px solid white;
+  box-shadow:0 0 0 4px var(--primary);
+}
+
+.experience-card h2{
+  margin-bottom:0.2rem;
+  color:var(--primary);
+  font-size:1.3rem;
+}
+
+.institution{
+  font-weight:600;
+  color:var(--accent);
+  margin-bottom:0.5rem;
+}
+
+.duration{
+  color:#666;
+  margin-bottom:1rem;
+  font-size:0.95rem;
+}
+
+.experience-card ul{
+  margin:0;
+  padding-left:1.2rem;
+}
+
+.experience-card li{
+  margin-bottom:0.6rem;
+  line-height:1.7;
+}
+
+footer{
+  margin-top:4rem;
+  text-align:center;
+  padding:2rem;
+  border-top:1px solid #ddd;
+}
+
+footer a{
+  text-decoration:none;
+  color:var(--primary);
+}
+
+@media(max-width:768px){
+
+.timeline::before{
+  left:10px;
+}
+
+.experience-card{
+  margin-left:35px;
+}
+
+.experience-card::before{
+  left:-30px;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-  <nav class="container-fluid">
-    <ul>
-      <li><strong>Sushil Kumar</strong></li>
-    </ul>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="academics.html">Academic Details</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="contact.html" role="button">Contact</a></li>
-    </ul>
-  </nav>
 
-  <main class="container">
-    <section>
-      <hgroup>
-        <h2>Professional Experience</h2>
-        <h3>Academic and Research Roles</h3>
-      </hgroup>
+<nav class="container-fluid">
 
-      <div class="experience-entry">
-        <h4>Research Associate</h4>
-        <p><strong>Indian Institute of Technology Roorkee</strong> | April 2024 – Present</p>
-        <p>
-          Currently working on an ongoing project titled <em>“Adaptation of Indigenous and Local Knowledge Systems and Fintech Solutions for Comprehensive Tribal Development in Chhattisgarh State.”</em>
-        </p>
-      </div>
+<ul>
+<li><strong>Dr. Sushil Kumar</strong></li>
+</ul>
 
-      <div class="experience-entry">
-        <h4>Coordinator, “Wednesday Talk” Lecture Series</h4>
-        <p><strong>Department of HSS, IIT Roorkee</strong> | Dec 2022 – July 2024</p>
-        <p>
-          Organised and managed a weekly lecture series, bringing together distinguished speakers and scholars to discuss diverse topics and promote academic engagement within the department.
-        </p>
-      </div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="academics.html">Academic Details</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="experience.html">Experience</a></li>
+<li><a href="contact.html" role="button">Contact</a></li>
+</ul>
 
-      <div class="experience-entry">
-        <h4>Teaching Assistant</h4>
-        <p><strong>NPTEL Course “Introduction to Environmental Economics”</strong> | January 2024 – April 2024</p>
-        <p>
-          Offered instructional support, graded assignments, and facilitated student learning.
-        </p>
-      </div>
+</nav>
 
-      <div class="experience-entry">
-        <h4>Student Assistantship</h4>
-        <p><strong>Indian Institute of Technology Roorkee</strong> | September 2022 – November 2022</p>
-        <p>
-          Project: <em>“Assessment of Ecological Damage and NPV of Future Ecosystem Services Forgone on Account of Illegal Mining Sites in Subarnarekha River in Odisha and West Bengal.”</em>
-        </p>
-        <p>
-          Assisted in data collection and data analysis related to ecological impact assessment and valuation of ecosystem services. Supported literature review and report preparation.
-        </p>
-      </div>
+<main class="container">
 
-      <div class="experience-entry">
-        <h4>Teaching Assistant</h4>
-        <p><strong>Department of Humanities & Social Sciences, IIT Roorkee</strong> | January 2019 – December 2020</p>
-        <p>
-          Conducted tutorials on Microeconomics and Macroeconomics for B.Tech students.
-        </p>
-      </div>
+<div class="page-title">
 
-      <div class="experience-entry">
-        <h4>Guest Faculty</h4>
-        <p><strong>Patna University</strong> | January 2017 – July 2018</p>
-        <p>
-          Delivered lectures on Microeconomics and Macroeconomics to undergraduate and postgraduate students.
-        </p>
-      </div>
+<h1>Professional Experience</h1>
 
-      <div class="experience-entry">
-        <h4>Assistant Professor</h4>
-        <p><strong>Lovely Professional University</strong> | August 2016 – November 2016</p>
-        <p>
-          Taught Managerial Economics and Quantitative Aptitude to MBA and BBA students. Assisted in academic activities, including syllabus preparation, question paper preparation, and evaluation of exam answer sheets.
-        </p>
-      </div>
-    </section>
-  </main>
+<p>
+Academic, Teaching, and Research Experience
+in Economics, Environmental Studies, and Applied Econometrics
+</p>
 
-  <footer class="container">
-    <small><a href="index.html">Back to Home</a></small>
-  </footer>
+</div>
+
+<div class="timeline">
+
+<!-- CHRIST -->
+
+<div class="experience-card">
+
+<h2>Assistant Professor</h2>
+
+<div class="institution">
+Christ (Deemed to be University), Delhi NCR
+</div>
+
+<div class="duration">
+06 January 2026 – Present
+</div>
+
+<ul>
+<li>
+Teaching undergraduate courses in Behavioural Economics and Basic Econometrics.
+</li>
+
+<li>
+Engaging students in quantitative and interdisciplinary approaches to economic analysis.
+</li>
+
+</ul>
+
+</div>
+
+<!-- SRM -->
+
+<div class="experience-card">
+
+<h2>Guest Faculty</h2>
+
+<div class="institution">
+SRM University–AP
+</div>
+
+<div class="duration">
+28 August 2025 – 05 January 2026
+</div>
+
+<ul>
+
+<li>
+Delivered lectures on Economics for Engineers to undergraduate B.Tech students.
+</li>
+
+<li>
+Responsible for student evaluation, preparation of question papers,
+and assessment of internal examinations.
+</li>
+
+</ul>
+
+</div>
+
+<!-- RA -->
+
+<div class="experience-card">
+
+<h2>Research Associate</h2>
+
+<div class="institution">
+Indian Institute of Technology Roorkee
+</div>
+
+<div class="duration">
+April 2024 – April 2025
+</div>
+
+<ul>
+
+<li>
+Worked on the project:
+<em>
+“Adaptation of Indigenous and Local Knowledge Systems and Fintech Solutions for Comprehensive Tribal Development in Chhattisgarh State.”
+</em>
+</li>
+
+<li>
+Conducted literature review on tribal development,
+indigenous knowledge systems, and fintech inclusion.
+</li>
+
+<li>
+Coordinated with field teams, government officials,
+and civil society stakeholders.
+</li>
+
+<li>
+Monitored and supervised primary data collection
+in tribal regions of Chhattisgarh.
+</li>
+
+<li>
+Assisted in designing survey tools and ensuring data quality during fieldwork.
+</li>
+
+</ul>
+
+</div>
+
+<!-- NPTEL -->
+
+<div class="experience-card">
+
+<h2>Teaching Assistant</h2>
+
+<div class="institution">
+NPTEL Course:
+“Introduction to Environmental Economics”
+</div>
+
+<div class="duration">
+January 2024 – April 2024
+</div>
+
+<ul>
+
+<li>
+Offered instructional support and academic mentoring.
+</li>
+
+<li>
+Graded assignments and facilitated student learning activities.
+</li>
+
+</ul>
+
+</div>
+
+<!-- STUDENT ASSISTANTSHIP -->
+
+<div class="experience-card">
+
+<h2>Student Assistantship</h2>
+
+<div class="institution">
+Indian Institute of Technology Roorkee
+</div>
+
+<div class="duration">
+September 2022 – November 2022
+</div>
+
+<ul>
+
+<li>
+Worked on project:
+<em>
+“Assessment of Ecological Damage and NPV of Future Ecosystem Services Forgone on Account of Illegal Mining Sites in Subarnarekha River in Odisha and West Bengal.”
+</em>
+</li>
+
+<li>
+Assisted in ecological impact assessment and valuation of ecosystem services.
+</li>
+
+<li>
+Supported literature review, data collection,
+data analysis, and report preparation.
+</li>
+
+</ul>
+
+</div>
+
+<!-- TA -->
+
+<div class="experience-card">
+
+<h2>Teaching Assistant</h2>
+
+<div class="institution">
+Department of Humanities & Social Sciences,
+IIT Roorkee
+</div>
+
+<div class="duration">
+January 2019 – December 2020
+</div>
+
+<ul>
+
+<li>
+Conducted tutorials on Microeconomics and Macroeconomics for B.Tech students.
+</li>
+
+<li>
+Supported classroom instruction and student engagement activities.
+</li>
+
+</ul>
+
+</div>
+
+<!-- PATNA -->
+
+<div class="experience-card">
+
+<h2>Guest Faculty</h2>
+
+<div class="institution">
+Patna University
+</div>
+
+<div class="duration">
+January 2017 – July 2018
+</div>
+
+<ul>
+
+<li>
+Delivered lectures on Microeconomics and Macroeconomics
+to undergraduate and postgraduate students.
+</li>
+
+<li>
+Participated in academic mentoring and curriculum support.
+</li>
+
+</ul>
+
+</div>
+
+<!-- LPU -->
+
+<div class="experience-card">
+
+<h2>Assistant Professor</h2>
+
+<div class="institution">
+Lovely Professional University
+</div>
+
+<div class="duration">
+August 2016 – November 2016
+</div>
+
+<ul>
+
+<li>
+Taught Managerial Economics and Quantitative Aptitude
+to MBA and BBA students.
+</li>
+
+<li>
+Assisted in syllabus preparation,
+question paper setting,
+and examination evaluation.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</main>
+
+<footer>
+
+<p>
+© 2026 Dr. Sushil Kumar
+</p>
+
+<p>
+<a href="index.html">Back to Home</a>
+</p>
+
+</footer>
+
 </body>
 </html>
