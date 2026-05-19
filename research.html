@@ -1,158 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Research | Sushil Kumar</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
 
-  <style>
-    /* Color palette */
-    :root {
-      --primary: #e67e22; /* Orange accent */
-      --primary-hover: #d35400;
-      --primary-focus: rgba(230, 126, 34, 0.125);
-    }
-    body {
-      background: #fcf3cf; /* Soft yellow background */
-    }
-    nav {
-      background-color: #fef5e7;
-    }
-    nav a {
-      color: var(--primary);
-    }
-    nav a:hover {
-      color: var(--primary-hover);
-    }
-    h2, h3 {
-      color: var(--primary);
-    }
-    ul li.publication,
-    ul li.seminar {
-      margin-bottom: 1em;
-      border: 1px solid #e67e22;
-      padding: 1em;
-      border-radius: 6px;
-      background: #fff9ec;
-    }
-  </style>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Research | Dr. Sushil Kumar</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+<style>
+
+:root{
+  --primary:#1e3a5f;
+  --secondary:#2563eb;
+  --light:#f8fafc;
+  --dark:#1f2937;
+  --accent:#0f766e;
+}
+
+body{
+  background:var(--light);
+  font-family:"Segoe UI",sans-serif;
+  color:var(--dark);
+}
+
+nav{
+  background:white;
+  padding:1rem 2rem;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav strong{
+  color:var(--primary);
+  font-size:1.2rem;
+}
+
+nav a{
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:var(--secondary);
+}
+
+main.container{
+  padding:3rem 1rem;
+}
+
+.page-title{
+  text-align:center;
+  margin-bottom:3rem;
+}
+
+.page-title h1{
+  color:var(--primary);
+  margin-bottom:0.5rem;
+}
+
+.page-title p{
+  font-size:1.1rem;
+  color:#555;
+  max-width:900px;
+  margin:auto;
+  line-height:1.8;
+}
+
+.section-title{
+  margin-top:4rem;
+  margin-bottom:2rem;
+  color:var(--primary);
+  border-left:5px solid var(--accent);
+  padding-left:1rem;
+}
+
+.card{
+  background:white;
+  padding:1.8rem;
+  margin-bottom:1.8rem;
+  border-radius:12px;
+  box-shadow:0 5px 18px rgba(0,0,0,0.06);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h3{
+  color:var(--primary);
+  margin-bottom:1rem;
+}
+
+.card p{
+  line-height:1.8;
+}
+
+.card a{
+  color:var(--secondary);
+  text-decoration:none;
+}
+
+.card a:hover{
+  text-decoration:underline;
+}
+
+.research-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:1.5rem;
+}
+
+.research-box{
+  background:white;
+  padding:1.5rem;
+  border-radius:12px;
+  box-shadow:0 5px 18px rgba(0,0,0,0.06);
+}
+
+.research-box h4{
+  color:var(--primary);
+}
+
+.timeline-item{
+  background:white;
+  padding:1.5rem;
+  margin-bottom:1.5rem;
+  border-left:5px solid var(--accent);
+  border-radius:10px;
+  box-shadow:0 5px 18px rgba(0,0,0,0.06);
+}
+
+.timeline-item p{
+  margin:0;
+  line-height:1.8;
+}
+
+footer{
+  margin-top:5rem;
+  padding:2rem;
+  text-align:center;
+  border-top:1px solid #ddd;
+}
+
+footer a{
+  text-decoration:none;
+  color:var(--primary);
+}
+
+</style>
+
 </head>
 
 <body>
-  <nav class="container-fluid">
-    <ul>
-      <li><strong>Sushil Kumar</strong></li>
-    </ul>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="academics.html">Academic Details</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="contact.html" role="button">Contact</a></li>
-    </ul>
-  </nav>
 
-  <main class="container" style="background: #fff9ec; padding: 2em; border-radius: 8px;">
-    <section>
-      <hgroup>
-        <h2>Research</h2>
-        <h3>Publications & Current Work</h3>
-      </hgroup>
-      <p>
-        My research focuses on the valuation of ecosystem services, pollution impacts, and household behavior in environmental decision-making.
-        I explore topics such as:
-      </p>
-      <ul>
-        <li>Valuation of ecosystem services using choice experiments</li>
-        <li>Health costs of arsenic contamination in groundwater</li>
-        <li>Behavioral economics related to water safety practices in rural India</li>
-      </ul>
-      <p>
-        Publications include peer-reviewed work in <i>Groundwater for Sustainable Development</i> and presentations at AAERE, INSEE, and As2024 conferences.
-      </p>
+<!-- NAVIGATION -->
 
-      <h3>Publications</h3>
-      <ul>
-        <li class="publication">
-          Kumar, S. & Nayak, D. (2025). Assessing the Health Costs of Arsenic-Contaminated Drinking Water in Bihar, India: A Bivariate Probit Analysis.
-          <i>Groundwater for Sustainable Development</i>, 29, 101429.
-          <br>
-          <a href="https://doi.org/10.1016/j.gsd.2025.101429" target="_blank">https://doi.org/10.1016/j.gsd.2025.101429</a>
-        </li>
-        <li class="publication">
-          Kumar, S. & Nayak, D. (2024). How do households living in arsenic-contaminated regions value safe drinking water in Western Bihar, India?
-          <i>Groundwater for Sustainable Development</i>, 26, 101189.
-          <br>
-          <a href="https://doi.org/10.1016/j.gsd.2024.101189" target="_blank">https://doi.org/10.1016/j.gsd.2024.101189</a>
-        </li>
-        <li class="publication">
-          Kaur, J. & Kumar, S. (2017). Challenges and Opportunities in Micro, Small and Medium Enterprises in India.
-          <i>Journal of Economics Patna University</i>, 2(1), 63–72.
-        </li>
-        <li class="publication">
-          Kumar, S. & Sinha, K. (2017). Demonetization: A Step Towards Digitalization.
-          <i>Journal of Economics Patna University</i>, 2(2), 62–73.
-        </li>
-      </ul>
+<nav class="container-fluid">
 
-      <h3>Seminars / Conferences</h3>
-      <ul>
-        <li class="seminar">
-          Delivered a poster presentation titled “Factors impacting the households’ decisions for arsenic-safe drinking water in Buxar District, Bihar” at the 9th International Congress & Exhibition on Arsenic in the Environment, KIIT University, October 20–24, 2024.
-        </li>
-        <li class="seminar">
-          Delivered a poster presentation titled “Assessing the Health Costs of Drinking Arsenic-Contaminated Water in Buxar District, Bihar: A Bivariate Probit Analysis” at the 12th INSEE Biennial Conference, BML Munjal University, January 31–February 2, 2024.
-        </li>
-        <li class="seminar">
-          Presented a paper entitled “How do arsenic-concentrated households perceive safe drinking water? A case study of Western Bihar, India” at the 12th Congress of Asian Association of Environmental and Resource Economics 2023 in Waseda University, Japan.
-        </li>
-        <li class="seminar">
-          Presented a research paper entitled “Impacts of Fluoride and Arsenic Contaminated Groundwater on Human Health: A Systematic Review and Evidence from India” at the national seminar on “Environmental Issues and Present Society,” MPISSR, December 21–22, 2021.
-        </li>
-        <li class="seminar">
-          Participated in the National Seminar on “Financial Inclusion and Women Empowerment in India,” Patna University, September 24–25, 2016.
-        </li>
-        <li class="seminar">
-          Presented a paper titled “A Study of the Trend of Public Expenditure on Education in India” in the National Seminar “Twenty-Five Years of Economic Reforms in India: The Path Ahead,” University of Allahabad, March 25–26, 2017.
-        </li>
-      </ul>
+<ul>
+<li><strong>Dr. Sushil Kumar</strong></li>
+</ul>
 
-      <h3>Workshops & Short Courses</h3>
-      <ul>
-        <li class="seminar">
-          Completed a short course on “Arsenic and Potentially Toxic Metals in Food and Agroecosystems,” 9th International Congress on Arsenic in the Environment, KIIT University, October 20–24, 2024.
-        </li>
-        <li class="seminar">
-          Participated in a one-week summer school on “Applied Econometrics,” Visva-Bharati, June 24–30, 2024.
-        </li>
-        <li class="seminar">
-          Attended a one-week online workshop on “Data Analytics Using R,” IIHMR University, June 19–23, 2020.
-        </li>
-        <li class="seminar">
-          Participated in the GIM Virtual Workshop on “Time Series and Panel Data Modelling Using E-Views and STATA,” June 12–14, 2020.
-        </li>
-        <li class="seminar">
-          Participated in a one-day workshop on “Improving Awareness about Plagiarism,” Mahatma Gandhi Central Library, IIT Roorkee, October 31, 2018.
-        </li>
-        <li class="seminar">
-          Participated in a one-day workshop on “Reference Management using Mendeley,” Mahatma Gandhi Central Library, IIT Roorkee, November 22, 2018.
-        </li>
-        <li class="seminar">
-          Participated in the “National Workshop on Research Methodology,” Babasaheb Bhimrao Ambedkar University, Lucknow, January 11–25, 2017.
-        </li>
-        <li class="seminar">
-          Participated in the workshop “Publishing in Academic Journals: An Author’s Workshop,” IIT Roorkee and Taylor & Francis Group, May 4, 2019.
-        </li>
-        <li class="seminar">
-          Participated in a two-day workshop on “Elder Abuse and Crime Against the Elderly,” IIT Roorkee and NISD, February 21–22, 2019.
-        </li>
-      </ul>
-    </section>
-  </main>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="academics.html">Academic Details</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="experience.html">Experience</a></li>
+<li><a href="contact.html" role="button">Contact</a></li>
+</ul>
 
-  <footer class="container">
-    <small><a href="index.html">Back to Home</a></small>
-  </footer>
+</nav>
+
+<!-- MAIN -->
+
+<main class="container">
+
+<!-- PAGE TITLE -->
+
+<div class="page-title">
+
+<h1>Research & Publications</h1>
+
+<p>
+
+My research focuses on environmental economics,
+health impacts of pollution,
+groundwater contamination,
+ecosystem valuation,
+behavioural dimensions of environmental decision-making,
+and applied econometrics.
+
+My work integrates interdisciplinary methods,
+large-scale datasets,
+and quantitative modelling approaches
+to address sustainability and development challenges.
+
+</p>
+
+</div>
+
+<!-- RESEARCH INTERESTS -->
+
+<h2 class="section-title">
+Research Areas
+</h2>
+
+<div class="research-grid">
+
+<div class="research-box">
+<h4>Environmental Economics</h4>
+<p>
+Groundwater contamination,
+pollution impacts,
+and sustainability analysis.
+</p>
+</div>
+
+<div class="research-box">
+<h4>Health Economics</h4>
+<p>
+Economic burden and health impacts
+of environmental pollution.
+</p>
+</div>
+
+<div class="research-box">
+<h4>Applied Econometrics</h4>
+<p>
+Bayesian methods,
+SEM,
+SUBP models,
+and impact evaluation.
+</p>
+</div>
+
+<div class="research-box">
+<h4>Development Economics</h4>
+<p>
+Livelihoods,
+education,
+poverty,
+and rural development.
+</p>
+</div>
+
+</div>
+
+<!-- PUBLICATIONS -->
+
+<h2 class="section-title">
+Publications
+</h2>
+
+<div class="card">
+
+<h3>
+Assessing the Health Costs of Arsenic-Contaminated Drinking Water in Bihar, India:
+A Bivariate Probit Analysis
+</h3>
+
+<p>
+
+Kumar, S. & Nayak, D. (2025)
+
+<br>
+
+<em>
+Groundwater for Sustainable Development
+</em>, 29, 101429.
+
+<br><br>
+
+<a href="https://doi.org/10.1016/j.gsd.2025.101429"
+target="_blank">
+View Publication
+</a>
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+How do households living in arsenic-contaminated regions value safe drinking water in Western Bihar, India?
+</h3>
+
+<p>
+
+Kumar, S. & Nayak, D. (2024)
+
+<br>
+
+<em>
+Groundwater for Sustainable Development
+</em>, 26, 101189.
+
+<br><br>
+
+<a href="https://doi.org/10.1016/j.gsd.2024.101189"
+target="_blank">
+View Publication
+</a>
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Challenges and Opportunities in Micro, Small and Medium Enterprises in India
+</h3>
+
+<p>
+
+Kaur, J. & Kumar, S. (2017)
+
+<br>
+
+<em>
+Journal of Economics Patna University
+</em>, 2(1), 63–72.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Demonetization: A Step Towards Digitalization
+</h3>
+
+<p>
+
+Kumar, S. & Sinha, K. (2017)
+
+<br>
+
+<em>
+Journal of Economics Patna University
+</em>, 2(2), 62–73.
+
+</p>
+
+</div>
+
+<!-- CONFERENCES -->
+
+<h2 class="section-title">
+Seminars & Conferences
+</h2>
+
+<div class="timeline-item">
+<p>
+Presented poster titled
+<em>
+“Factors impacting the households’ decisions for arsenic-safe drinking water in Buxar District, Bihar”
+</em>
+at the 9th International Congress & Exhibition on Arsenic in the Environment,
+KIIT University, October 2024.
+</p>
+</div>
+
+<div class="timeline-item">
+<p>
+Presented poster titled
+<em>
+“Assessing the Health Costs of Drinking Arsenic-Contaminated Water in Buxar District, Bihar:
+A Bivariate Probit Analysis”
+</em>
+at the 12th INSEE Biennial Conference,
+BML Munjal University, February 2024.
+</p>
+</div>
+
+<div class="timeline-item">
+<p>
+Presented paper at the
+12th Congress of Asian Association of Environmental and Resource Economics (AAERE),
+Waseda University, Japan.
+</p>
+</div>
+
+<div class="timeline-item">
+<p>
+Presented research paper on fluoride and arsenic contaminated groundwater
+at MPISSR National Seminar on Environmental Issues and Present Society, 2021.
+</p>
+</div>
+
+<!-- WORKSHOPS -->
+
+<h2 class="section-title">
+Workshops & Short Courses
+</h2>
+
+<div class="timeline-item">
+<p>
+Completed short course on
+<em>
+“Arsenic and Potentially Toxic Metals in Food and Agroecosystems”
+</em>,
+KIIT University, 2024.
+</p>
+</div>
+
+<div class="timeline-item">
+<p>
+Participated in Summer School on Applied Econometrics,
+Visva-Bharati University, 2024.
+</p>
+</div>
+
+<div class="timeline-item">
+<p>
+Participated in workshops on
+Data Analytics using R,
+Panel Data Modelling using STATA,
+Research Methodology,
+and Academic Publishing.
+</p>
+</div>
+
+<!-- OTHER EXPERIENCES -->
+
+<h2 class="section-title">
+Other Academic Experiences
+</h2>
+
+<div class="timeline-item">
+<p>
+
+Volunteered at the
+<strong>
+62nd Annual Conference of the Indian Society of Labour Economics (ISLE)
+</strong>,
+organized by the Department of Humanities and Social Sciences,
+IIT Roorkee,
+from 11th–13th April 2022.
+
+</p>
+</div>
+
+<div class="timeline-item">
+<p>
+
+Volunteered at the
+<strong>
+28th Annual Conference of the Indian Political Economy Association (IPEA)
+</strong>,
+organized by the Department of Humanities and Social Sciences,
+IIT Roorkee,
+from 16th–17th December 2024,
+on the theme:
+
+<em>
+“The Past, Present, and Future of Inclusive Development”
+</em>
+
+</p>
+</div>
+
+<div class="timeline-item">
+<p>
+
+Served as
+<strong>
+Coordinator, “Wednesday Talk” Lecture Series
+</strong>
+
+at the Department of Humanities & Social Sciences,
+IIT Roorkee
+(December 2022 – July 2024).
+
+<br><br>
+
+Organised and managed weekly academic lectures,
+bringing together distinguished scholars and speakers
+to promote interdisciplinary discussions
+and academic engagement.
+
+</p>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Dr. Sushil Kumar
+</p>
+
+<p>
+
+<a href="index.html">
+Back to Home
+</a>
+
+</p>
+
+</footer>
+
 </body>
 </html>
