@@ -15,23 +15,27 @@ href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 <style>
 
 :root{
-  --primary:#1e3a5f;
-  --secondary:#2563eb;
-  --light:#f8fafc;
-  --dark:#1f2937;
-  --accent:#0f766e;
+  --primary:#12355b;
+  --secondary:#1d4ed8;
+  --light:#f3f4f6;
+  --dark:#111827;
+  --accent:#0b4f4a;
 }
 
 body{
   background:var(--light);
-  font-family:"Segoe UI",sans-serif;
   color:var(--dark);
+  font-family:"Segoe UI",sans-serif;
+  line-height:1.8;
+  font-size:16px;
 }
+
+/* NAVIGATION */
 
 nav{
   background:white;
   padding:1rem 2rem;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  box-shadow:0 2px 12px rgba(0,0,0,0.08);
 }
 
 nav strong{
@@ -42,49 +46,61 @@ nav strong{
 nav a{
   color:var(--primary);
   text-decoration:none;
-  font-weight:500;
+  font-weight:600;
 }
 
 nav a:hover{
   color:var(--secondary);
 }
 
+/* MAIN */
+
 main.container{
   padding:3rem 1rem;
 }
 
+/* PAGE TITLE */
+
 .page-title{
   text-align:center;
-  margin-bottom:3rem;
+  margin-bottom:4rem;
 }
 
 .page-title h1{
-  color:var(--primary);
-  margin-bottom:0.5rem;
+  color:#0f172a;
+  margin-bottom:1rem;
+  font-size:2.8rem;
 }
 
 .page-title p{
-  font-size:1.1rem;
-  color:#555;
-  max-width:900px;
+  color:#374151;
+  max-width:950px;
   margin:auto;
-  line-height:1.8;
+  font-size:1.1rem;
+  line-height:1.9;
 }
+
+/* SECTION HEADINGS */
 
 .section-title{
   margin-top:4rem;
   margin-bottom:2rem;
-  color:var(--primary);
-  border-left:5px solid var(--accent);
+  color:#0f172a;
+  border-left:6px solid var(--primary);
   padding-left:1rem;
+  font-size:1.8rem;
 }
+
+/* CARDS */
 
 .card{
   background:white;
-  padding:1.8rem;
-  margin-bottom:1.8rem;
-  border-radius:12px;
-  box-shadow:0 5px 18px rgba(0,0,0,0.06);
+  color:#111827;
+  padding:2rem;
+  margin-bottom:2rem;
+  border-radius:14px;
+  border:1px solid #d1d5db;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06);
   transition:0.3s;
 }
 
@@ -93,16 +109,24 @@ main.container{
 }
 
 .card h3{
-  color:var(--primary);
+  color:#0f172a;
   margin-bottom:1rem;
+  font-size:1.3rem;
 }
 
 .card p{
-  line-height:1.8;
+  color:#111827;
+  line-height:1.9;
+}
+
+.card em{
+  color:#111827;
+  font-weight:600;
 }
 
 .card a{
   color:var(--secondary);
+  font-weight:600;
   text-decoration:none;
 }
 
@@ -110,47 +134,93 @@ main.container{
   text-decoration:underline;
 }
 
+/* RESEARCH GRID */
+
 .research-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:1.5rem;
 }
 
 .research-box{
   background:white;
-  padding:1.5rem;
-  border-radius:12px;
-  box-shadow:0 5px 18px rgba(0,0,0,0.06);
+  padding:1.8rem;
+  border-radius:14px;
+  border:1px solid #d1d5db;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06);
 }
 
 .research-box h4{
-  color:var(--primary);
+  color:#0f172a;
+  margin-bottom:1rem;
 }
+
+.research-box p{
+  color:#374151;
+}
+
+/* TIMELINE */
 
 .timeline-item{
   background:white;
-  padding:1.5rem;
-  margin-bottom:1.5rem;
-  border-left:5px solid var(--accent);
-  border-radius:10px;
-  box-shadow:0 5px 18px rgba(0,0,0,0.06);
+  padding:1.8rem;
+  margin-bottom:1.8rem;
+  border-left:6px solid #12355b;
+  border-radius:12px;
+  border:1px solid #d1d5db;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06);
 }
 
 .timeline-item p{
+  color:#111827;
   margin:0;
-  line-height:1.8;
+  line-height:1.9;
 }
+
+.timeline-item strong{
+  color:#0f172a;
+}
+
+/* FOOTER */
 
 footer{
   margin-top:5rem;
   padding:2rem;
   text-align:center;
-  border-top:1px solid #ddd;
+  border-top:1px solid #d1d5db;
+  background:white;
+}
+
+footer p{
+  color:#374151;
 }
 
 footer a{
   text-decoration:none;
   color:var(--primary);
+  font-weight:600;
+}
+
+footer a:hover{
+  color:var(--secondary);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+  padding:1rem;
+}
+
+.page-title h1{
+  font-size:2.2rem;
+}
+
+.section-title{
+  font-size:1.5rem;
+}
+
 }
 
 </style>
@@ -181,7 +251,7 @@ footer a{
 
 <main class="container">
 
-<!-- PAGE TITLE -->
+<!-- TITLE -->
 
 <div class="page-title">
 
@@ -190,22 +260,23 @@ footer a{
 <p>
 
 My research focuses on environmental economics,
-health impacts of pollution,
-groundwater contamination,
+health impacts of groundwater contamination,
 ecosystem valuation,
 behavioural dimensions of environmental decision-making,
 and applied econometrics.
 
-My work integrates interdisciplinary methods,
-large-scale datasets,
-and quantitative modelling approaches
-to address sustainability and development challenges.
+My work integrates interdisciplinary approaches,
+large-scale survey datasets,
+and advanced quantitative methods
+to address sustainability,
+public health,
+and development policy challenges.
 
 </p>
 
 </div>
 
-<!-- RESEARCH INTERESTS -->
+<!-- RESEARCH AREAS -->
 
 <h2 class="section-title">
 Research Areas
@@ -214,40 +285,57 @@ Research Areas
 <div class="research-grid">
 
 <div class="research-box">
+
 <h4>Environmental Economics</h4>
+
 <p>
 Groundwater contamination,
 pollution impacts,
-and sustainability analysis.
+ecosystem valuation,
+and sustainability assessment.
 </p>
+
 </div>
 
 <div class="research-box">
+
 <h4>Health Economics</h4>
+
 <p>
-Economic burden and health impacts
-of environmental pollution.
+Health costs,
+disease burden,
+and socio-economic impacts
+of environmental exposure.
 </p>
+
 </div>
 
 <div class="research-box">
+
 <h4>Applied Econometrics</h4>
+
 <p>
-Bayesian methods,
+Bayesian Regression,
 SEM,
-SUBP models,
-and impact evaluation.
+PLS-SEM,
+SUBP Models,
+and impact evaluation methods.
 </p>
+
 </div>
 
 <div class="research-box">
+
 <h4>Development Economics</h4>
+
 <p>
 Livelihoods,
 education,
+rural development,
 poverty,
-and rural development.
+and policy evaluation.
 </p>
+
 </div>
 
 </div>
@@ -273,13 +361,16 @@ Kumar, S. & Nayak, D. (2025)
 
 <em>
 Groundwater for Sustainable Development
-</em>, 29, 101429.
+</em>,
+29, 101429.
 
 <br><br>
 
 <a href="https://doi.org/10.1016/j.gsd.2025.101429"
 target="_blank">
+
 View Publication
+
 </a>
 
 </p>
@@ -300,13 +391,16 @@ Kumar, S. & Nayak, D. (2024)
 
 <em>
 Groundwater for Sustainable Development
-</em>, 26, 101189.
+</em>,
+26, 101189.
 
 <br><br>
 
 <a href="https://doi.org/10.1016/j.gsd.2024.101189"
 target="_blank">
+
 View Publication
+
 </a>
 
 </p>
@@ -327,7 +421,8 @@ Kaur, J. & Kumar, S. (2017)
 
 <em>
 Journal of Economics Patna University
-</em>, 2(1), 63–72.
+</em>,
+2(1), 63–72.
 
 </p>
 
@@ -347,7 +442,8 @@ Kumar, S. & Sinha, K. (2017)
 
 <em>
 Journal of Economics Patna University
-</em>, 2(2), 62–73.
+</em>,
+2(2), 62–73.
 
 </p>
 
@@ -360,41 +456,50 @@ Seminars & Conferences
 </h2>
 
 <div class="timeline-item">
+
 <p>
+
 Presented poster titled
 <em>
 “Factors impacting the households’ decisions for arsenic-safe drinking water in Buxar District, Bihar”
 </em>
+
 at the 9th International Congress & Exhibition on Arsenic in the Environment,
-KIIT University, October 2024.
+KIIT University,
+October 2024.
+
 </p>
+
 </div>
 
 <div class="timeline-item">
+
 <p>
+
 Presented poster titled
 <em>
 “Assessing the Health Costs of Drinking Arsenic-Contaminated Water in Buxar District, Bihar:
 A Bivariate Probit Analysis”
 </em>
+
 at the 12th INSEE Biennial Conference,
-BML Munjal University, February 2024.
+BML Munjal University,
+February 2024.
+
 </p>
+
 </div>
 
 <div class="timeline-item">
+
 <p>
+
 Presented paper at the
 12th Congress of Asian Association of Environmental and Resource Economics (AAERE),
 Waseda University, Japan.
-</p>
-</div>
 
-<div class="timeline-item">
-<p>
-Presented research paper on fluoride and arsenic contaminated groundwater
-at MPISSR National Seminar on Environmental Issues and Present Society, 2021.
 </p>
+
 </div>
 
 <!-- WORKSHOPS -->
@@ -404,30 +509,44 @@ Workshops & Short Courses
 </h2>
 
 <div class="timeline-item">
+
 <p>
+
 Completed short course on
 <em>
 “Arsenic and Potentially Toxic Metals in Food and Agroecosystems”
 </em>,
-KIIT University, 2024.
+KIIT University,
+2024.
+
 </p>
+
 </div>
 
 <div class="timeline-item">
+
 <p>
+
 Participated in Summer School on Applied Econometrics,
-Visva-Bharati University, 2024.
+Visva-Bharati University,
+2024.
+
 </p>
+
 </div>
 
 <div class="timeline-item">
+
 <p>
+
 Participated in workshops on
 Data Analytics using R,
 Panel Data Modelling using STATA,
 Research Methodology,
 and Academic Publishing.
+
 </p>
+
 </div>
 
 <!-- OTHER EXPERIENCES -->
@@ -437,6 +556,7 @@ Other Academic Experiences
 </h2>
 
 <div class="timeline-item">
+
 <p>
 
 Volunteered at the
@@ -448,9 +568,11 @@ IIT Roorkee,
 from 11th–13th April 2022.
 
 </p>
+
 </div>
 
 <div class="timeline-item">
+
 <p>
 
 Volunteered at the
@@ -467,9 +589,11 @@ on the theme:
 </em>
 
 </p>
+
 </div>
 
 <div class="timeline-item">
+
 <p>
 
 Served as
@@ -489,6 +613,7 @@ to promote interdisciplinary discussions
 and academic engagement.
 
 </p>
+
 </div>
 
 </main>
